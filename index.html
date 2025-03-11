@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+<body>
+    <div class="containernav">
+        <h2>BMI CALCULATOR</h2>
+    </div>
+        <div class="calculator">
+            <div class="input-section">
+                <label>Weight</label>
+                <div class="input-group">
+                    <input type="number" id="weight" placeholder="Enter your Weight" required>
+                    <select id="weightUnit">
+                         <option value="kg">Kilograms(kg)</option>
+                         <option value="lbs">Pounds</option>
+                        <option value="gram">Gram(g)</option>
+                    </select>
+                </div>
+                
+                <label>Height</label>
+                <div class="input-group">
+                    <input type="number" id="height" placeholder="Enter your Height" required>
+                    <select id="heightUnit">
+                        <option value="m">Meters(m)</option>
+                        <option value="cm">Centimeters(cm)</option>
+                        <option value="in">Inches</option>
+                        <option value="feet">Feet</option>
+                    </select>
+                   
+                </div>
+                <div class="input-new">
+                <label>Birthday</label>
+                <input type="date" id="birthday" placeholder="Enter your Birthday" required>
+                    </div>
+                <button onclick="calculateBMI()">Calculate</button>
+            </div>
+            <div class="result-section">
+                <h3>Result</h3>
+                <p id="result"></p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>Developer : Banuja Lakmuthu</p>
+        </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
