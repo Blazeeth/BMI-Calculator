@@ -1,0 +1,109 @@
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: url('bg1.jpg') no-repeat center center/cover;
+}
+
+/* Navigation Bar */
+.containernav {
+    background: rgba(255, 255, 255, 0.459);
+    width: 70%;
+    text-align: center;
+    margin-top: -50px;
+    margin-bottom: 70px;
+    padding-top: 35px;
+    font-size: 28px;
+    font-weight: bold;
+    color: #333;
+    border-radius: 40px;
+}
+
+/* Calculator Container */
+.calculator {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    width: 60%;
+    padding: 10px 10px 10px 10px;
+    border-radius: 30px;
+}
+
+/* Input Section */
+.input-section {
+    width: 40%;
+    height: 100%;
+    padding: 15px;
+    background: rgba(207, 207, 207, 0.466);
+    border-radius: 30px;
+    padding: 20px;
+}
+
+.input-section label {
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.input-group input,
+.input-group select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #00000096;
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+/* Button */
+button {
+    width: 85%;
+    padding: 10px;
+    background: rgba(45, 87, 223, 0.575);
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    margin-left: 15px;
+    
+}
+
+button:hover {
+    background: rgba(47, 50, 212, 0.507);
+   color: #333;
+}
+
+/* Result Section */
+.result-section {
+    width: 45%;
+    padding: 20px;
+    background: hsla(0, 0%, 100%, 0.404);
+    border-radius: 30px;
+    text-align: center;
+    font-size: 18px;
+}
+
+/* Footer */
+.footer {
+    margin-top: 65px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    width: 95%;
+    font-size: 14px;
+    border-radius: 10px;
+}
