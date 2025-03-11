@@ -1,0 +1,60 @@
+document.addEventListener("DOMContentLoaded", function () {
+    function calculateBMI() {
+        let weight = parseFloat(document.getElementById("weight").value);
+        let height = parseFloat(document.getElementById("height").value);
+        let weightUnit = document.getElementById("weightUnit").value;
+        let heightUnit = document.getElementById("heightUnit").value;
+        let birthdayInput = document.getElementById("birthday").value;
+        let resultElement = document.getElementById("result");
+
+        // Convert weight units
+        if (weightUnit === "lbs") {
+            weight = weight * 0.453592; // Convert pounds to kg
+        } else if (weightUnit === "gram") {
+            weight = weight / 1000; // Convert grams to kg
+        }
+
+        // Convert height units
+        if (heightUnit === "cm") {
+            height = height / 100; // Convert cm to meters
+        } else if (heightUnit === "in") {
+            height = height * 0.0254; // Convert inches to meters
+        } else if (heightUnit === "feet") {
+            height = height * 0.3048; // Convert feet to meters
+        }
+
+        // Validate inputs
+        if (weight > 0 && height > 0) {
+            let bmi = weight / (height * height);
+            let category = "";
+
+            if (bmi < 18.5) category = "Underweight";
+            else if (bmi < 24.9) category = "Normal weight";
+            else if (bmi < 29.9) category = "Overweight";
+            else category = "Obese";
+
+            let ageText = calculateAge(birthdayInput);
+            resultElement.innerHTML = `BMI: ${bmi.toFixed(2)} (${category})<br>${ageText}`;
+        } else {
+            resultElement.innerHTML = "Please enter valid weight and height!";
+        }
+    }
+
+    function calculateAge(birthdayInput) {
+        if (!birthdayInput) return "Please enter your birthday!";
+
+        let birthDate = new Date(birthdayInput);
+        let today = new Date();
+        let age = today.getFullYear() - birthDate.getFullYear();
+        let monthDiff = today.getMonth() - birthDate.getMonth();
+
+        if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+
+        return `Your age is: ${age} years`;
+    }
+
+    // Attach event listener to button
+    document.querySelector("button").addEventListener("click", calculateBMI);
+});
