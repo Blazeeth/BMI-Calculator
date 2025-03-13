@@ -1,4 +1,4 @@
-# BMI Calculator 💪📏  
+# BMI Calculator
 
 A sleek and modern **BMI (Body Mass Index) Calculator** built using **HTML, CSS, and JavaScript**.  
 It allows users to input their **weight**, **height**, and **birthday**, and calculates both **BMI** and **age**.  
@@ -15,12 +15,9 @@ It allows users to input their **weight**, **height**, and **birthday**, and cal
 - **HTML** – Structure of the webpage  
 - **CSS** – Styling with gradients, glassmorphism effect  
 - **JavaScript** – BMI & Age calculations  
-
-## 📸 Screenshot  
-![BMI Calculator](BMI_CALCULATOR.png)  
-
+ 
 ## 🛠️ Setup Instructions  
 1. Clone this repository  
    ```bash
-   git clone https://github.com/your-username/BMI-Calculator.git
+   git clone https://github.com/Blazeeth/BMI-Calculator.git
    cd BMI-Calculator
