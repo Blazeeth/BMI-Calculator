@@ -27,16 +27,31 @@ document.addEventListener("DOMContentLoaded", function () {
         if (weight > 0 && height > 0) {
             let bmi = weight / (height * height);
             let category = "";
+            let categoryColor = "";
 
-            if (bmi < 18.5) category = "Underweight";
-            else if (bmi < 24.9) category = "Normal weight";
-            else if (bmi < 29.9) category = "Overweight";
-            else category = "Obese";
+            if (bmi < 18.5) {
+                category = "Underweight";
+                categoryColor = "yellow";
+            } else if (bmi < 24.9) {
+                category = "Normal weight";
+                categoryColor = "green";
+            } else if (bmi < 29.9) {
+                category = "Overweight";
+                categoryColor = "lightcoral"; // Light red
+            } else {
+                category = "Obese";
+                categoryColor = "red";
+            }
 
             let ageText = calculateAge(birthdayInput);
-            resultElement.innerHTML = `BMI: ${bmi.toFixed(2)} (${category})<br>${ageText}`;
+            resultElement.innerHTML = `
+                <span style="color: black;">BMI: ${bmi.toFixed(2)}</span> 
+                <strong style="color: ${categoryColor};">${category}</strong><br><br>
+                <span style="color: black;">${ageText}</span>
+            `;
         } else {
             resultElement.innerHTML = "Please enter valid weight and height!";
+            resultElement.style.color = "black";
         }
     }
 
