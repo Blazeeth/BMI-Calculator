@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             let ageText = calculateAge(birthdayInput);
             resultElement.innerHTML = `
-                <span style="color: black;">BMI: ${bmi.toFixed(2)}</span> 
+                <br><span style="color: black;">BMI: ${bmi.toFixed(2)}</span> 
                 <strong style="color: ${categoryColor};">${category}</strong><br><br>
                 <span style="color: black;">${ageText}</span>
             `;
@@ -70,6 +70,20 @@ document.addEventListener("DOMContentLoaded", function () {
         return `Your age is: ${age} years`;
     }
 
-    // Attach event listener to button
-    document.querySelector("button").addEventListener("click", calculateBMI);
+    function resetFields() {
+        document.getElementById("weight").value = "";
+        document.getElementById("height").value = "";
+        document.getElementById("weightUnit").value = "kg";
+        document.getElementById("heightUnit").value = "m";
+        document.getElementById("birthday").value = "";
+        document.getElementById("result").innerHTML = "";
+    }
+
+    // Attach event listeners
+    document.querySelector(".cal-btn").addEventListener("click", calculateBMI);
+    document.querySelector(".reset-btn").addEventListener("click", resetFields);
+    document.querySelector(".nav-btn").addEventListener("click", function () {
+        window.open("https://x.com/banujalakmuthu", "_blank");
+    });
+    
 });
