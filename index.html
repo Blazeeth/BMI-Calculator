@@ -3,50 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BMI Calculator</title>
+    <title>BMI</title>
     <link rel="stylesheet" href="style.css">
-<body>
-    <div class="containernav">
-        <h2>BMI CALCULATOR</h2>
-    </div>
-        <div class="calculator">
-            <div class="input-section">
-                <label>Weight</label>
-                <div class="input-group">
-                    <input type="number" id="weight" placeholder="Enter your Weight" required>
-                    <select id="weightUnit">
-                         <option value="kg">Kilograms(kg)</option>
-                         <option value="lbs">Pounds</option>
-                        <option value="gram">Gram(g)</option>
-                    </select>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+    <body>
+        <nav>
+            <img src="logo.png" alt="" class="logo">
+            <div class="nav-t"> 
+                <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>   
+                <button class="nav-btn">Follow Us</button>
+        </nav>
+        
+             <div class="header">
+                <section id="home"></section>
+                    <div class="calculator">
+                            <div class="input-section">
+                                <label>Weight</label>
+                                <div class="input-group">
+                                    <input type="number" id="weight" placeholder="Enter your Weight" required>
+                                    <select id="weightUnit">
+                                        <option value="kg">Kilograms(kg)</option>
+                                        <option value="lbs">Pounds</option>
+                                        <option value="gram">Gram(g)</option>
+                                    </select>
+                                </div>
+                                
+                                <label>Height</label>
+                                <div class="input-group">
+                                    <input type="number" id="height" placeholder="Enter your Height" required>
+                                    <select id="heightUnit">
+                                        <option value="m">Meters(m)</option>
+                                        <option value="cm">Centimeters(cm)</option>
+                                        <option value="in">Inches</option>
+                                        <option value="feet">Feet</option>
+                                    </select>
+                                
+                                </div>
+                            <div class="input-new">
+                                <label>Birthday</label>
+                                <input type="date" id="birthday" placeholder="Enter your Birthday" required>
+                            </div>
+                         <button  class="cal-btn" onclick="calculateBMI()">Calculate</button>
+                         <button class="reset-btn">Reset</button>
+
+                     </div>
+                         <div class="result-section">
+                        <h3>Result</h3>
+                        <p id="result"></p>
+                        </div>
+                    </div>
                 </div>
                 
-                <label>Height</label>
-                <div class="input-group">
-                    <input type="number" id="height" placeholder="Enter your Height" required>
-                    <select id="heightUnit">
-                        <option value="m">Meters(m)</option>
-                        <option value="cm">Centimeters(cm)</option>
-                        <option value="in">Inches</option>
-                        <option value="feet">Feet</option>
-                    </select>
-                   
+            <div class="content">
+                <section id="about"></section>
+               <br><br><br><center><h2>ABOUT BMI</h2></center><br><br>
+               <div class="para">
+             <p><h4>What is BMI?</h4>Body Mass Index (BMI) is a widely recognized measurement used to assess a person’s weight in relation to their height. It provides a simple numerical value that helps categorize individuals into different weight classifications, including underweight, normal weight, overweight, and obese. The BMI calculation is performed by dividing a person’s weight (in kilograms) by the square of their height (in meters). Although BMI is not a direct measurement of body fat, it serves as an effective screening tool for assessing potential health risks related to body weight.</p>   
+             <br><p><h4>Why is BMI Important?</h4>Maintaining a healthy BMI is crucial for overall well-being, as it is closely linked to various health outcomes. People with a BMI that falls within the normal range are generally considered to have a lower risk of developing weight-related health issues. However, individuals classified as overweight or obese may face a higher likelihood of experiencing chronic conditions such as heart disease, type 2 diabetes, high blood pressure, and certain types of cancer. Conversely, being underweight can also pose health risks, including weakened immunity, nutritional deficiencies, and a higher susceptibility to bone fractures.</p>
+             <br><p><h4>BMI Categories and Their Implications:</h4><br>
+                <ul>
+                    <li><b>Underweight (BMI < 18.5):</b> Individuals in this category may not be consuming enough essential nutrients, leading to a weakened immune system, decreased muscle strength, and potential fertility issues.</li><br>
+                    <li><b>Normal Weight (BMI 18.5 – 24.9):</b>This range is considered healthy and is associated with a lower risk of weight-related health problems. However, maintaining a balanced diet and regular physical activity is still essential for overall health.</li><br>
+                    <li><b>Overweight (BMI 25 – 29.9):</b> Being overweight may increase the risk of cardiovascular diseases, metabolic disorders, and joint issues. Lifestyle modifications such as healthier eating habits and increased physical activity can help manage weight effectively.</li><br>
+                    <li><b>Obese (BMI ≥ 30):</b>Obesity is a serious health concern as it significantly raises the likelihood of developing chronic illnesses, including diabetes, stroke, and heart disease. It is important for individuals in this category to seek medical guidance and adopt a healthier lifestyle to reduce risks.</li><br>
+                </ul>
+
+                <p><h4>Limitations of BMI:</h4>Although BMI is a useful tool for assessing weight-related health risks, it has limitations. It does not distinguish between fat mass and muscle mass, which means that highly muscular individuals, such as athletes, may have a higher BMI despite having low body fat. Additionally, BMI does not account for factors such as age, gender, body composition, and fat distribution, all of which influence overall health.</p><br>
+                <p><h4>Alternative Methods for Assessing Health:</h4>For a more accurate evaluation of health, BMI should be considered alongside other measurements, such as:</p>
+                <ul>
+                    <li><b>Waist-to-Hip Ratio:</b>Determines fat distribution, particularly in the abdominal region, which is associated with higher health risks.</li><br>
+                    <li><b>Body Fat Percentage:</b>Provides insight into the proportion of fat versus lean muscle in the body.</li><br>
+                    <li><b>Overall Fitness Level:</b>Regular physical activity and a balanced diet play a crucial role in maintaining a healthy weight and overall well-being.</li><br>
+                 </ul>
+
+                 <p><h4>Conclusion:</h4>Understanding your BMI can be the first step toward improving your health. It serves as a helpful guideline to assess whether your weight is within a healthy range, but it should not be the sole determinant of your well-being. Combining BMI with other health indicators and making lifestyle choices that promote a balanced diet, regular exercise, and overall wellness will lead to better long-term health outcomes. If you are concerned about your BMI or weight-related health risks, consulting a healthcare professional can provide personalized advice and support for achieving a healthier lifestyle.</p>
+             
                 </div>
-                <div class="input-new">
-                <label>Birthday</label>
-                <input type="date" id="birthday" placeholder="Enter your Birthday" required>
+            </div>
+
+            
+            <div class="contact">
+                <section id="contact"></section>
+               <br><br><br> <center><h2>Contact Us</h2></center>
+                <div class="condev">
+               <div class="contact-container">
+                <form action="#" method="POST">
+                    <div class="finput-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" placeholder="Enter your name" required>
                     </div>
-                <button onclick="calculateBMI()">Calculate</button>
+                    <div class="finput-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="finput-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Enter your message" required></textarea>
+                    </div>
+                    <button class="form-btn"  type="submit">Send Message</button>
+                </form>
             </div>
-            <div class="result-section">
-                <h3>Result</h3>
-                <p id="result"></p>
+                <div class="social-icons">
+                    <a href="https://facebook.com" target="_blank">
+                        <img src="facebook.png" alt="Facebook">
+                    </a><br>
+                    <a href="https://twitter.com" target="_blank">
+                        <img src="x.png" alt="Twitter">
+                    </a>
+                    </a><br>
+                    <a href="https://youtube.com" target="_blank">
+                        <img src="youtube.png" alt="Twitter">
+                    </a>
+                </div>
+        </div>
+    </div>
+        <footer>
+            <div class="footer-container">
+                <p class="footer-text">&copy; 2025 bmical.com. All rights reserved.</p>
+                <div class="footer-nav">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                
             </div>
-        </div>
-        <div class="footer">
-            <p>&copy; 2025 bmical.com</p>
-        </div>
-    
-    <script src="script.js"></script>
-</body>
+        </footer>
+        <script src="script.js"></script>
+    </body>
 </html>
